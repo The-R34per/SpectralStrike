@@ -1,0 +1,212 @@
+/* ------------------------------
+   GLOBAL HYBRID GLOW THEME
+   Tactical + Cyberpunk + Hacker
+--------------------------------*/
+
+:root {
+  --bg-dark: #0a0f1f;
+  --bg-panel: #111827;
+  --bg-panel-2: #1e293b;
+
+  --glow-aqua: #00ffc6;
+  --glow-purple: #7c3aed;
+  --glow-green: #10b981;
+
+  --text-main: #e2e8f0;
+  --text-dim: #94a3b8;
+
+  --border-glow: 0 0 12px rgba(0, 255, 198, 0.4),
+                 0 0 24px rgba(124, 58, 237, 0.3);
+}
+
+/* Tactical grid background */
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+  display: none;                /* Chrome, Edge, Safari */
+}
+
+/* Smooth HUD transitions */
+* {
+  transition: 0.2s ease;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+/* Glow panel */
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid rgba(0,255,198,0.2);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--border-glow);
+}
+
+/* Glow buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--glow-purple);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.6);
+}
+
+.btn-green {
+  background: var(--glow-green);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+.btn-red {
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--bg-panel-2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid rgba(0,255,198,0.2);
+  box-shadow: 4px 0 20px rgba(0,255,198,0.1);
+}
+
+.sidebar-item {
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.8;
+}
+
+.sidebar-item:hover {
+  background: rgba(0,255,198,0.1);
+  box-shadow: var(--border-glow);
+  opacity: 1;
+}
+
+.sidebar-active {
+  background: rgba(124,58,237,0.2);
+  box-shadow: var(--border-glow);
+  opacity: 1;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--bg-panel-2);
+  border-bottom: 1px solid rgba(0,255,198,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,255,198,0.1);
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--glow-aqua);
+  text-shadow: 0 0 8px rgba(0,255,198,0.6);
+}
+
+.header-status {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Scanline overlay (subtle) */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.02) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0.15;
+}
+
+body {
+	overflow-x: hidden !important;
+}
+
+.toggle {
+  position: relative;
+  width: 46px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1e293b;
+  border-radius: 24px;
+  transition: 0.3s;
+  border: 1px solid #334155;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #64748b;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #0ea5e9;
+  box-shadow: 0 0 8px #0ea5e9;
+  border-color: #38bdf8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+  background: white;
+}
