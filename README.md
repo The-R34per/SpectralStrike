@@ -53,6 +53,14 @@ This makes SpectralStrike ideal for students, cybersecurity learners, and early 
 
 ![Dashboard](images/dashboard.png)
 
+![Dashboard](images/learn.png)
+
+![Dashboard](images/network.png)
+
+![Dashboard](images/osint.png)
+
+![Dashboard](images/targets.png)
+
 ---
 
 ## Tech Stack
