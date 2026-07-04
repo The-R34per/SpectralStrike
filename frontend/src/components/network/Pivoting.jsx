@@ -138,7 +138,7 @@ function Pivoting() {
           <pre style={{ margin: 0, fontFamily: "monospace", fontSize: 13, color: "#e2e8f0", whiteSpace: "pre-wrap", wordBreak: "break-all" }}>
             {c.cmd}
           </pre>
-          {c.note && <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 12 }}>💡 {c.note}</p>}
+          {c.note && <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 12 }}>{c.note}</p>}
         </div>
       ))}
       <p style={{ color: "#475569", fontSize: 12, marginTop: 16 }}>
