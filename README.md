@@ -49,6 +49,12 @@ This makes SpectralStrike ideal for students, cybersecurity learners, and early 
 
 ---
 
+## Pictures of Dashboard
+
+![Dashboard](images/dashboard.png)
+
+---
+
 ## Tech Stack
 
 ### Backend (FastAPI)
