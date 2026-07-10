@@ -85,6 +85,13 @@ This makes SpectralStrike ideal for students, cybersecurity learners, and early 
 
 ## 🔧 Installation
 
+### Requirements
+
+Install all the requirements:
+```bash
+pip install -r requirements.txt
+```
+
 ### Backend
 ```bash
 cd backend
